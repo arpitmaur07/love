@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* 🌈 Animated Gradient Background */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #fcb69f);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  position: relative;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 💗 Floating Hearts (smaller) */
+.hearts::before {
+  content: "💖 💕 💗 💓 💞 💘";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 100%;
+  font-size: 20px;   /* smaller */
+  animation: floatHearts 8s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes floatHearts {
+  0% { top: 100%; }
+  100% { top: -10%; }
+}
+
+/* 💌 Love Card (smaller padding) */
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 30px;   /* reduced from 50px */
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Question text smaller */
+.question {
+  font-size: 22px;   /* reduced from 34px */
+  margin-bottom: 20px;
+}
+
+/* Button Area smaller */
+.buttonArea {
+  position: relative;
+  width: 350px;   /* reduced */
+  height: 150px;  /* reduced */
+  margin: auto;
+}
+
+/* Buttons Base smaller */
+button {
+  padding: 8px 18px;   /* reduced */
+  font-size: 14px;     /* reduced */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Yes Button */
+.yesBtn {
+  background: linear-gradient(45deg, #ff4e8b, #ff0066);
+  color: white;
+  box-shadow: 0 0 10px #ff4e8b;
+  transition: 0.3s;
+}
+
+.yesBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px #ff0066;
+}
+
+/* No Button */
+.noBtn {
+  position: absolute;
+  background: linear-gradient(45deg, #444, #222);
+  color: white;
+  transition: none;
+}
+
+/* Success text smaller */
+.successCard {
+  font-size: 18px;  /* reduced */
+  text-shadow: 0 0 15px hotpink;
+}
+
+/* 🌈 Gradient Text smaller effect */
+.gradientText {
+  background: linear-gradient(
+    270deg,
+    #ff4e8b,
+    #ff0066,
+    #ff9a9e,
+    #ff1493,
+    #ff4e8b
+  );
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* GIF styling smaller */
+.loveGif {
+  width: 150px;   /* reduced from 220px */
+  height: auto;
+  margin-bottom: 10px;
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
